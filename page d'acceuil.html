@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduPlatform - Accueil</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* --- GLOBAL --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(120deg, #1f1c2c, #928dab);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      background: linear-gradient(45deg, #ff6ec4, #7873f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffb6ff;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5rem 2rem;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(120deg, #2b2e4a, #e84545);
+      background-blend-mode: overlay;
+      background-size: cover;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      background: linear-gradient(45deg, #ff6ec4, #7873f5);
+      color: #fff;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 110, 196, 0.5);
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 4rem 2rem;
+      background-color: #1f1c2c;
+    }
+
+    .feature {
+      background: rgba(255, 255, 255, 0.08);
+      margin: 1rem;
+      padding: 2rem;
+      border-radius: 1rem;
+      width: 280px;
+      text-align: center;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .feature h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.2);
+      font-size: 0.9rem;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body> <nav class="navbar"> ... </nav>
+
+  <header>
+    <h1>EduPlatform</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="login.html">Connexion</a>
+      <a href="signup.html">Inscription</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Apprenez où que vous soyez</h2>
+      <p>Des cours interactifs, un tableau de bord personnalisé, une expérience fluide et moderne.</p>
+      <a href="signup.html" class="btn">Commencer</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>🎓 Cours variés</h3>
+      <p>Apprenez à votre rythme grâce à nos modules adaptés.</p>
+    </div>
+    <div class="feature">
+      <h3>📊 Suivi clair</h3>
+      <p>Votre tableau de bord vous donne une vue d'ensemble instantanée.</p>
+    </div>
+    <div class="feature">
+      <h3>💻 100% en ligne</h3>
+      <p>Accessible sur tous vos appareils, où que vous soyez.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 EduPlatform. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
+

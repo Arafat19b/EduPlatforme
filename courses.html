@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modules disponibles</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #00d2ff;
+    }
+
+    .modules {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .module {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px 30px;
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .module:hover {
+      background-color: #00d2ff;
+      color: #000;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Modules disponibles</h1>
+    <div class="modules">
+      <div class="module" onclick="goToDetails('html')">HTML</div>
+      <div class="module" onclick="goToDetails('css')">CSS</div>
+      <div class="module" onclick="goToDetails('js')">JavaScript</div>
+    </div>
+  </div>
+
+  <script>
+    function goToDetails(module) {
+      window.location.href = `course-detail.html?module=${module}`;
+    }
+  </script>
+
+</body>
+</html>
+
+
+

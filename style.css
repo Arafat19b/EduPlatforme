@@ -1,0 +1,314 @@
+/* ==== PROFILE PAGE ==== */
+.profile-body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  width: 300px;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid #fff;
+}
+
+.profile-name {
+  font-size: 24px;
+  margin: 10px 0 5px;
+}
+
+.profile-role {
+  font-size: 16px;
+  color: #dcdcdc;
+}
+
+.profile-email {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #4f46e5;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px 5px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #3b33c5;
+}
+
+.btn-secondary {
+  background: #6b7280;
+}
+
+.btn-secondary:hover {
+  background: #4b5563;/* ==== COURSES PAGE ==== */
+.courses-body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.courses-header {
+  text-align: center;
+  padding: 30px 20px 10px;
+}
+
+.courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.course-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px) scale(1.03);
+}
+
+.course-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.course-card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+/* ==== COURSE DETAIL ==== */
+.course-detail-body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #1d4350, #a43931);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.course-detail-container {
+  width: 90%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.course-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.course-detail-header h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.video-section {
+  margin: 20px 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.course-description h2 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #ffd;
+}
+
+.course-description p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.lessons-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lessons-list li {
+  margin: 10px 0;
+  font-size: 15px;
+  padding-left: 1em;
+  position: relative;
+}
+
+.lessons-list li::before {
+  content: "📘";
+  position: absolute;
+  left: 0;
+}
+/* === Animated background === */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 20%, #1e1e2f, #000);
+  background-size: cover;
+  z-index: -1;
+  animation: bgShift 10s ease-in-out infinite alternate;
+  filter: blur(8px);
+  opacity: 0.8;
+}
+
+@keyframes bgShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* === Dashboard content === */
+.dashboard-content {
+  padding: 120px 20px 60px;
+  color: white;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.dashboard-subtitle {
+  font-size: 18px;
+  color: #ddd;
+  margin-bottom: 50px;
+  animation: fadeInDown 1.2s ease-in-out;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 30px 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.dashboard-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.dashboard-card p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00a8ff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #007acc;
+}
+
+.btn.danger {
+  background: #e84118;
+}
+
+.btn.danger:hover {
+  background: #c23616;
+}
+
+/* === Animations === */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

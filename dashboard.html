@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - EduPlatform</title>
+  <style>
+    /* Import Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      background: #000;
+      overflow-x: hidden;
+    }
+
+    /* === Animated Background === */
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 30%, #1a1a2e, #000000);
+      background-size: cover;
+      z-index: -1;
+      animation: bgShift 10s ease-in-out infinite alternate;
+      filter: blur(10px);
+      opacity: 0.8;
+    }
+
+    @keyframes bgShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    /* === Dashboard Content === */
+    .dashboard-content {
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+
+    .dashboard-title {
+      font-size: 42px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .dashboard-subtitle {
+      font-size: 18px;
+      color: #ccc;
+      margin-bottom: 40px;
+      animation: fadeInDown 1.2s ease-in-out;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .dashboard-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 30px 20px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .dashboard-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .dashboard-card h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .dashboard-card p {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #00a8ff;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #007acc;
+    }
+
+    .btn.danger {
+      background: #e84118;
+    }
+
+    .btn.danger:hover {
+      background: #c23616;
+    }
+
+    /* === Animations === */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* === Responsive === */
+    @media (max-width: 600px) {
+      .dashboard-title {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌌 Background animé -->
+  <div class="animated-bg"></div>
+
+  <!-- 📊 Dashboard Content -->
+  <section class="dashboard-content">
+    <h1 class="dashboard-title">Bienvenue sur votre Dashboard</h1>
+    <p class="dashboard-subtitle">Accédez rapidement à toutes vos sections</p>
+
+    <div class="dashboard-grid">
+      <div class="dashboard-card">
+        <h2>Mes Cours</h2>
+        <p>Consultez vos cours enregistrés</p>
+        <a href="courses.html" class="btn">Voir les cours</a>
+      </div>
+
+      <div class="dashboard-card">
+        <h2>Mon Profil</h2>
+        <p>Gérez vos informations personnelles</p>
+        <a href="profile.html" class="btn">Voir mon profil</a>
+      </div>
+
+      <div class="dashboard-card">
+        <h2>Déconnexion</h2>
+        <p>Quitter la plateforme</p>
+        <a href="index.html" class="btn danger">Se déconnecter</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
+
+
